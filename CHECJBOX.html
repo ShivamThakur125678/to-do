@@ -1,0 +1,45 @@
+<html>
+<head>
+
+<style>
+body {
+background-color: #c7c7c7;
+text-align: center;
+id01:hover{
+	background-color: red;
+}
+	;
+
+
+</style>
+</head>
+<body>
+		<h2>TO-DO-APP </h2>
+		<h3>ENTER-YOUR-LIST</h3>
+		<input type="text"  id="id1" name="text" placeholder="Enter Here">
+	
+		<input type="button" id="id0" onclick="myFunction()" name="Click me" value="Click me">
+
+		<div id="content"></div>
+
+<script>
+		var arr=[];
+		var inputTag  =document.getElementById("id1");
+		var div = document.getElementById("content");
+	   	function myFunction(){
+	   		div.innerHTML = "";
+		 	var x=inputTag.value;
+		 	arr.push(x);
+			inputTag.value = "";
+			for(var i = 0;i<arr.length;i++) {
+				var p = document.createElement("p");
+				p.innerHTML = arr[i];
+				div.append(p);
+			}
+		}
+
+
+</script>
+
+
+</body>
